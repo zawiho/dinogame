@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Avians | Zachary Howell</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!--TITLE-->
+    <div id="homeDiv">
+        <h1><img id="titleImg" src="images/tutorial/title.png"></h1>
+        <a href="https://zacharyhowell.ca" target="_blank"><img id="authorImg" src="images/tutorial/author.png"></a>
+
+        <div class="home-buttons">
+            <img id="tutorialBtn" src="images/buttons/tutorial.png">
+            <img id="beginBtn" src="images/buttons/begin.png">
+        </div>
+    </div>
+
+<!--TUTORIAL-->
+    <div id="tutorialDiv" class="hidden">
+        <p>
+            <img id="tutImg" src="images/tutorial/tut1.png">
+        </p>
+        <img id="prevBtn" class="hidden" src="images/buttons/previous.png" width="150">
+        <img id="nextBtn" src="images/buttons/next.png" width="150">
+
+        <img id="beginBtn2" class="hidden" src="images/buttons/begin.png">
+    </div>
+
+<!--CHARACTER SELECTION-->
+    <section id="selectionDiv" class="hidden"> 
+        <h2>Choose Your Character</h2>
+
+        <div class="choose">
+            <div class="choose-red">
+                <img src="images/icons/circle-red.png" id="chooseRed" width="265">
+                <h3>Gregorio</h3>
+            </div>
+            
+            <div class="choose-blue">
+                <img src="images/icons/circle-blue.png" id="chooseBlue" width="265">
+                <h3>Hampstead</h3>
+            </div>
+            
+            <div class="choose-yellow">
+                <img src="images/icons/circle-yellow.png" id="chooseYellow" width="265">
+                <h3>Miisraks</h3>
+            </div>
+            
+            <div class="choose-green">
+                <img src="images/icons/circle-green.png" id="chooseGreen" width="265">
+                <h3>Alan</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Red Dinosaur -->
+    <div id="redModal" class="choose-modal hidden">
+        <h2>Gregorio</h2>
+        <div class="character-img">
+            <img src="images/dinosaurs/player-red.png" width="650">
+        </div>
+        <div class="player-stats">
+            <div class="stat-container">
+                <img src="images/icons/attack.png" height="90">
+                <p class="stat-value">10</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/defense.png">
+                <p class="stat-value">05</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/speed.png" height="93">
+                <p class="stat-value">05</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/health.png" height="90">
+                <p class="stat-value">50</p>
+            </div>
+        </div>
+        <div class="choose-buttons">
+            <img src="images/buttons/back.png" id="redBack" width="250">
+            <img src="images/buttons/begin.png" id="redBegin" width="250">
+        </div>
+    </div>
+
+    <!-- Blue Dinosaur -->
+    <div id="blueModal" class="choose-modal hidden">
+        <h2>Hampstead</h2>
+        <div class="character-img">
+            <img src="images/dinosaurs/player-blue.png" width="650">
+        </div>
+        <div class="player-stats">
+            <div class="stat-container">
+                <img src="images/icons/attack.png" height="90">
+                <p class="stat-value">10</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/defense.png">
+                <p class="stat-value">05</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/speed.png" height="93">
+                <p class="stat-value">05</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/health.png" height="90">
+                <p class="stat-value">50</p>
+            </div>
+        </div>
+        <div class="choose-buttons">
+            <img src="images/buttons/back.png" id="blueBack" width="250">
+            <img src="images/buttons/begin.png" id="blueBegin" width="250">
+        </div>
+    </div>
+
+    <!-- Yellow Dinosaur -->
+    <div id="yellowModal" class="choose-modal hidden">
+        <h2>Miisraks</h2>
+        <div class="character-img">
+            <img src="images/dinosaurs/player-yellow.png" width="650">
+        </div>
+        <div class="player-stats">
+            <div class="stat-container">
+                <img src="images/icons/attack.png" height="90">
+                <p class="stat-value">10</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/defense.png">
+                <p class="stat-value">05</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/speed.png" height="93">
+                <p class="stat-value">05</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/health.png" height="90">
+                <p class="stat-value">50</p>
+            </div>
+        </div>
+        <div class="choose-buttons">
+            <img src="images/buttons/back.png" id="yellowBack" width="250">
+            <img src="images/buttons/begin.png" id="yellowBegin" width="250">
+        </div>
+    </div>
+
+    <!-- Green Dinosaur -->
+    <div id="greenModal" class="choose-modal hidden">
+        <h2>Alan</h2>
+        <div class="character-img">
+            <img src="images/dinosaurs/player-green.png" width="650">
+        </div>
+        <div class="player-stats">
+            <div class="stat-container">
+                <img src="images/icons/attack.png" height="90">
+                <p class="stat-value">10</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/defense.png">
+                <p class="stat-value">05</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/speed.png" height="93">
+                <p class="stat-value">05</p>
+            </div>
+            <div class="stat-container">
+                <img src="images/icons/health.png" height="90">
+                <p class="stat-value">50</p>
+            </div>
+        </div>
+        <div class="choose-buttons">
+            <img src="images/buttons/back.png" id="greenBack" width="250">
+            <img src="images/buttons/begin.png" id="greenBegin" width="250">
+        </div>
+    </div>
+
+<!--BOARD-->
+    <main id="board" class="board-main hidden">
+        <div id="proceed">
+            <p>Press the spacebar to proceed.</p>
+        </div>
+
+        <div class="board-container">
+            <img src="images/board/board.png" class="board">
+            <img src="images/icons/circle-green.png" id="playerCircle" width="132">
+            <img src="images/icons/icon-green.png" id="playerIcon" width="129">
+        </div>
+        <div class="board-stats">
+            <p id="boardAtk">10</p>
+            <p id="boardDef">05</p>
+            <p id="boardSpd">05</p>
+        </div>
+        <div class="health-stats">
+            <p><span id=hlthValue>50</span> / 50</p>
+        </div>
+        <div class="bone-icons">
+            <img src="images/icons/white-skull.png" alt="" width="50" id="skullIcon">
+            <img src="images/icons/white-arm.png" alt="" width="46" id="armsIcon">
+            <img src="images/icons/white-torso.png" alt="" width="60" id="torsoIcon">
+            <img src="images/icons/white-leg.png" alt="" width="28" id="legsIcon">
+            <img src="images/icons/white-tail.png" alt="" width="50" id="tailIcon">
+        </div>
+    </main>
+
+<!--EQUIPMENT-->
+    <div id="equipmentModal1" class="hidden">
+        <div class="grid-container">
+            <h2 class="equipment-heading"><img src="images/titles/equip-heading.png" width="800"></h2>
+            <div class="equip-grid">
+                <div>
+                    <img src="images/cards/sail-card.png" class="gear" id="gearOne1" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipOne1" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healOne1" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/plate-card.png" class="gear" id="gearTwo1" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipTwo1" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healTwo1" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/dermal-card.png" class="gear" id="gearThree1" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipThree1" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healThree1" width="240">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="equipmentModal2" class="hidden">
+        <div class="grid-container">
+            <h2 class="equipment-heading"><img src="images/titles/equip-heading.png" width="800"></h2>
+            <div class="equip-grid">
+                <div>
+                    <img src="images/cards/scythe-card.png" class="gear"  id="gearOne2" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipOne2" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healOne2" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/pinion-card.png" class="gear"  id="gearTwo2" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipTwo2" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healTwo2" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/claws-card.png" class="gear"  id="gearThree2" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipThree2" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healThree2" width="240">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="equipmentModal3" class="hidden">
+        <div class="grid-container">
+            <h2 class="equipment-heading"><img src="images/titles/equip-heading.png" width="800"></h2>
+            <div class="equip-grid">
+                <div>
+                    <img src="images/cards/dome-card.png" class="gear"  id="gearOne3" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipOne3" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healOne3" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/beak-card.png" class="gear"  id="gearTwo3" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipTwo3" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healTwo3" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/spikes-card.png" class="gear"  id="gearThree3" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipThree3" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healThree3" width="240">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="equipmentModal4" class="hidden">
+        <div class="grid-container">
+            <h2 class="equipment-heading"><img src="images/titles/equip-heading.png" width="800"></h2>
+            <div class="equip-grid">
+                <div>
+                    <img src="images/cards/feathers-card.png" class="gear"  id="gearOne4" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipOne4" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healOne4" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/club-card.png" class="gear"  id="gearTwo4" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipTwo4" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healTwo4" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/thags-card.png" class="gear"  id="gearThree4" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipThree4" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healThree4" width="240">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="equipmentModal5" class="hidden">
+        <div class="grid-container">
+            <h2 class="equipment-heading"><img src="images/titles/equip-heading.png" width="800"></h2>
+            <div class="equip-grid">
+                <div>
+                    <img src="images/cards/bracers-card.png" class="gear"  id="gearOne5" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipOne5" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healOne5" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/sprinters-card.png" class="gear"  id="gearTwo5" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipTwo5" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healTwo5" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/talons-card.png" class="gear"  id="gearThree5" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipThree5" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healThree5" width="240">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="equipmentModal6" class="hidden">
+        <div class="grid-container">
+            <h2 class="equipment-heading"><img src="images/titles/equip-heading.png" width="800"></h2>
+            <div class="equip-grid">
+                <div>
+                    <img src="images/cards/sail-card.png" class="gear" id="gearOne6" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipOne6" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healOne6" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/plate-card.png" class="gear" id="gearTwo6" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipTwo6" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healTwo6" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/dermal-card.png" class="gear" id="gearThree6" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipThree6" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healThree6" width="240">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="equipmentModal7" class="hidden">
+        <div class="grid-container">
+            <h2 class="equipment-heading"><img src="images/titles/equip-heading.png" width="800"></h2>
+            <div class="equip-grid">
+                <div>
+                    <img src="images/cards/scythe-card.png" class="gear"  id="gearOne7" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipOne7" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healOne7" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/pinion-card.png" class="gear"  id="gearTwo7" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipTwo7" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healTwo7" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/claws-card.png" class="gear"  id="gearThree7" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipThree7" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healThree7" width="240">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="equipmentModal8" class="hidden">
+        <div class="grid-container">
+            <h2 class="equipment-heading"><img src="images/titles/equip-heading.png" width="800"></h2>
+            <div class="equip-grid">
+                <div>
+                    <img src="images/cards/dome-card.png" class="gear"  id="gearOne8" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipOne8" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healOne8" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/beak-card.png" class="gear"  id="gearTwo8" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipTwo8" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healTwo8" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/spikes-card.png" class="gear"  id="gearThree8" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipThree8" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healThree8" width="240">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="equipmentModal9" class="hidden">
+        <div class="grid-container">
+            <h2 class="equipment-heading"><img src="images/titles/equip-heading.png" width="800"></h2>
+            <div class="equip-grid">
+                <div>
+                    <img src="images/cards/feathers-card.png" class="gear"  id="gearOne9" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipOne9" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healOne9" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/club-card.png" class="gear"  id="gearTwo9" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipTwo9" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healTwo9" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/thags-card.png" class="gear"  id="gearThree9" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipThree9" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healThree9" width="240">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="equipmentModal10" class="hidden">
+        <div class="grid-container">
+            <h2 class="equipment-heading"><img src="images/titles/equip-heading.png" width="800"></h2>
+            <div class="equip-grid">
+                <div>
+                    <img src="images/cards/bracers-card.png" class="gear"  id="gearOne10" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipOne10" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healOne10" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/sprinters-card.png" class="gear"  id="gearTwo10" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipTwo10" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healTwo10" width="240">
+                </div>
+                <div>
+                    <img src="images/cards/talons-card.png" class="gear"  id="gearThree10" width="340">
+                    <img src="images/buttons/equip.png" class="equip" id="equipThree10" width="240">
+                    <img src="images/buttons/consume.png" class="heal" id="healThree10" width="240">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="compare" class="compare hidden">
+        <p id="comp1">
+            <span id="comp1Atk"></span>
+            <span id="comp1Def"></span>
+            <span id="comp1Spd"></span>
+        </p>
+        <p id="comp2">
+            <span id="comp2Atk"></span>
+            <span id="comp2Def"></span>
+            <span id="comp2Spd"></span>
+        </p>
+        <p id="comp3">
+            <span id="comp3Atk"></span>
+            <span id="comp3Def"></span>
+            <span id="comp3Spd"></span>
+        </p>
+    </div>
+
+<!--DEAD!-->
+<div id="deadModal">
+    <h2 id="deadH2">EXTINCT</h2>
+    <img id="skelly" src="images/dinosaurs/skelly.png">
+    <h3 id="deadH3">PLAY AGAIN?</h3>
+    <a href="index.html" id="playAgain"><img src="images/buttons/start-over.png"></a>
+</div>
+
+<!--BATTLE-->
+<div class="battle-div hidden" id="battleModal">
+    <div class="player-container">
+        <img src="player-green.png" width="495.5" id="battlePlayer">
+        <div id="statsDiv" class="stats">
+            <div class="stat-grid">
+                <div><img src="images/icons/attack.png" width="40"> <p id="xAtk">10</p></div>        
+                <div><img src="images/icons/defense.png" width="30"> <p id="xDef">05</p></div>          
+                <div><img src="images/icons/speed.png" width="50"> <p id="xSpd">05</p></div> 
+            </div>         
+            <div class="health-div"><img src="images/icons/health.png" width="50"> <p><span id="xHlth">50</span> / 50</p></div>
+        </div>
+    </div>
+
+    <img src="images/equipment/dome-right.png" id="dome" width="78.5" class="hidden">
+    <img src="images/equipment/beak-right.png" id="beak" width="55.5" class="hidden">
+    <img src="images/equipment/spikes-right.png" id="spikes" width="78.5" class="hidden">
+    <!--Arms-->
+    <img src="images/equipment/scythes-right.png" id="scythe" width="111.5" class="hidden">
+    <img src="images/equipment/pinions-right.png" id="pinion" width="63" class="hidden">
+    <img src="images/equipment/longclaws-right.png" id="claws" width="50" class="hidden">
+    <!--Torsos-->
+    <img src="images/equipment/sail-right.png" id="sail" width="145.5" class="hidden">
+    <img src="images/equipment/plate-right.png" id="armour" width="166.5" class="hidden">
+    <img src="images/equipment/dermal-right.png" id="dermal" width="143" class="hidden">
+    <!--Legs-->
+    <img src="images/equipment/sprinters-right.png" id="sprint" width="88.5" class="hidden">
+    <img src="images/equipment/bracers-right.png" id="bracer" width="88" class="hidden">
+    <img src="images/equipment/talons-right.png" id="talon" width="114.5" class="hidden">
+    <!--Tails-->
+    <img src="images/equipment/club-right.png" id="club" width="137" class="hidden">
+    <img src="images/equipment/feathers-right.png" id="feather" width="141.5" class="hidden">
+    <img src="images/equipment/thagomizers-right.png" id="thags" width="118" class="hidden">
+
+
+    <div id="enemyDiv" class="enemy-container">
+        <img src="enemy-blue.png" width="495.5" id="battleEnemy">
+        <div class="stats">
+            <div class="stat-grid">
+                <div><img src="images/icons/attack.png" width="40"> <p id="yAtk">10</p></div>        
+                <div><img src="images/icons/defense.png" width="30"> <p id="yDef">05</p></div>          
+                <div><img src="images/icons/speed.png" width="50"> <p id="ySpd">05</p></div> 
+            </div>         
+            <div class="health-div"><img src="images/icons/health.png" width="50"> <p><span id="yHlth">50</span> / 50</p></div>
+            
+        </div>
+    </div>
+
+    <img src="images/buttons/attack.png" id="attack" width="300">
+    <div id="actionDiv" class="hidden">
+        <p id="action"></p>
+    </div>
+
+    <!--WINNER-->
+    <div id="finish" class="hidden">
+        <div id="finale" class="finale">
+            <h2>YOU ARE THE TOP PREDATOR</h2>
+            <p>Congratulations! You have unlocked the bonus mini-game!</p>
+                <img id="bonusBtn" src="images/buttons/bonus.png" width="20%">
+        </div>
+    
+        <a href="index.html">
+            <img id="winAgain" src="images/buttons/play-again.png" width="20%">
+        </a>
+    
+        <div id="dressup" class="hidden">
+            <h2>DINO DRESS-UP</h2>
+        
+            <div class="body-parts">
+                <img src="images/icons/bone-skull.png" width="90">
+                <img src="images/icons/bone-arm.png" width="80">
+                <img src="images/icons/bone-torso.png" width="100">
+                <img src="images/icons/bone-leg.png" width="50">
+                <img src="images/icons/bone-tail.png" width="80">
+            </div>
+        
+            <div class="buttons">
+                <div class="head-buttons">
+                    <button id="btnDome">Dome</button> 
+                    <button id="btnBeak">Beak</button> 
+                    <button id="btnSpikes">Spikes</button>
+                </div>
+                <div class="arm-buttons">
+                    <button id="btnScythe">Scythe</button> 
+                    <button id="btnPinion">Pinions</button> 
+                    <button id="btnClaws">Claws</button>
+                </div>
+                <div class="torso-buttons">
+                    <button id="btnArmour">Armour</button> 
+                    <button id="btnSail">Sail</button> 
+                    <button id="btnPlates">Plates</button>
+                </div>
+                <div class="leg-buttons">
+                    <button id="btnBrace">Bracers</button> 
+                    <button id="btnSprint">Sprinters</button> 
+                    <button id="btnTalon">Talons</button>
+                </div>
+                <div class="tail-buttons">
+                    <button id="btnClub">Club</button>
+                    <button id="btnFeather">Feathers</button> 
+                    <button id="btnThag">Thags</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="title.js" defer></script>
+    <script src="tutorial.js"></script>
+    <script src="objects.js"></script>
+    <script src="choose.js"></script>
+    <script src="movement.js"></script>
+    <script src="equip.js"></script>
+    <script src="battle.js"></script>
+    <script src="winner.js"></script>
+<footer id="footer">
+    <small>
+        Copyright &copy; Zachary Howell 2023<br>
+        Background texture by <a href="https://opengameart.org/content/tileable-dirt-textures" target="_blank">Cethiel</a> on <a href="https://opengameart.org/content/tileable-dirt-textures" target="_blank">opengameart.org</a> CC0.
+    </small>
+</footer>
+
+</body>
+</html>

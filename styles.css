@@ -1,0 +1,728 @@
+@import url("https://use.typekit.net/sds8nnm.css");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    background-image:url("images/textures/Dirt_01.png");
+    background-repeat:repeat;
+}
+
+/*TITLE SCREEN*/
+#homeDiv{
+    opacity:1;
+    transition:opacity 1000ms;
+    transition-timing-function: ease-out;
+    width:100%;
+    height:100%;
+    margin:0;
+    padding-top:3%;
+}
+#homeDiv h1{
+    display:block;
+    width:100%;
+    text-align:center;
+    margin:0 auto;
+}
+#titleImg{
+    opacity:0;
+    transition:opacity 1500ms;
+    transition-timing-function: ease-out;
+    width:80%;
+    position:relative;
+    left:1.5%;
+}
+#homeDiv a{
+    display:block;
+    width:40%;
+    margin:0 auto;
+}
+#authorImg{
+    opacity:0;
+    transition:opacity 1000ms;
+    transition-timing-function: ease-out;
+    width:100%;
+}
+.home-buttons{
+    padding-top:2rem;
+}
+.home-buttons img{
+    width:20%;
+}
+.home-buttons img:hover{
+    cursor:pointer;
+}
+#tutorialBtn{
+    opacity:0;
+    transition:opacity 1000ms;
+    transition-timing-function: ease-out;
+    position:absolute;
+    left:26%;
+}
+#beginBtn{
+    opacity:0;
+    transition:opacity 1000ms;
+    transition-timing-function: ease-out;
+    position:absolute;
+    right:26%;
+}
+
+/*TUTORIAL*/
+#tutorialDiv{
+    opacity:0;
+    transition:opacity 1000ms;
+    transition-timing-function: ease-out;
+    width:100%;
+    height:100%;
+    margin:0;
+}
+#tutorialDiv p{
+    text-align:center;
+    padding-top:2%;
+}
+#tutImg{
+    width:84%;
+}
+#prevBtn{
+    position:absolute;
+    left:2%;
+    bottom:4%;
+}
+#nextBtn{
+    position:absolute;
+    right:2%;
+    bottom:4%;
+}
+#beginBtn2{
+    opacity:0;
+    transition:opacity,1000ms;
+    transition-timing-function: ease-out;
+    width:20%;
+    position:absolute;
+    bottom:20%;
+    left:40%;
+}
+#prevBtn:hover, #nextBtn:hover, #beginBtn, #beginBtn2{
+    cursor:pointer;
+}
+
+/*Character Selection*/
+#selectionDiv{
+    opacity:0;
+    transition:opacity,1000ms;
+    transition-timing-function: ease-out;
+}
+h2, h3{
+    text-align:center;
+}
+h2{
+    font-family:Brevia, Arial, Helvetica, sans-serif;
+    font-weight:900;
+    font-size:5rem;
+    color:white;
+    text-shadow:-3px -3px 0 #212227, 3px -3px 0 #212227, -3px 3px 0 #212227, 3px 3px 0 #212227;
+    margin:0 0 1rem 0;
+}
+h3{
+    font-family:Brevia, Arial, Helvetica, sans-serif;
+    font-weight:900;
+    font-size:3rem;
+    color:white;
+    text-shadow:-2px -2px 0 #212227, 2px -2px 0 #212227, -2px 2px 0 #212227, 2px 2px 0 #212227;
+    margin:0 0 1rem 0;  
+}
+.choose-blue>h3{
+    font-size:2.95rem;
+}
+.choose{
+    display:flex;
+    margin:0 auto;
+    width:1200px;
+}
+.choose div{
+    flex:1;
+    margin:1rem;
+}
+.choose div img{
+    width:100%;
+}
+.choose div img:hover{
+    cursor:pointer;
+}
+
+    /*Modal*/
+.choose-modal{
+    width:1200px;
+    margin:0 auto;
+    z-index:999;
+}
+.character-img{
+    /* border:1px solid red; */
+    padding-left:260px;
+}
+.player-stats{
+    width:80%;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.stat-container{
+    flex:1;
+    display:flex;
+    /* border:1px solid orange; */
+    margin:0.5rem 2rem;
+}
+.stat-value{
+    font-family:Brevia, Arial, Helvetica, sans-serif;
+    font-weight:900;
+    font-size:4rem;
+    color:white;
+    text-shadow:-2.5px -2.5px 0 #212227, 2.5px -2.5px 0 #212227, -2.5px 2.5px 0 #212227, 2.5px 2.5px 0 #212227;
+    margin:0 0 1rem 0;
+    padding-top:0.5rem;
+    padding-left:1rem;
+}
+.stat-container img, .stat-container p{
+    display:block;
+    flex:1;
+}
+.player-health{
+    display:flex;
+}
+.player-health img{
+    flex:1;
+}
+.choose-buttons{
+    width:50%;
+    margin:1rem auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.choose-buttons img:hover{
+    cursor:pointer;
+}
+
+/*Board*/
+#board{
+    opacity:0;
+    transition:opacity,1000ms;
+    transition-timing-function: ease-out;
+}
+.board-main{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    margin:0;
+    z-index:0;
+}
+#proceed{
+    opacity:0;
+    transition:opacity,1000ms;
+    transition-timing-function: ease-out;
+    position:fixed;
+    top:40%;
+    background-color:hsla(0,100%,100%,80%);
+    border-radius: 20px;
+    padding:0 1rem;
+    width:446px;
+    z-index:999;
+}
+#proceed p{
+    text-align:center;
+    font-family:"Josefin Sans";
+    font-size:1.6rem; 
+}
+div.board-container{
+    width:1200px;
+    height:685px;
+    margin:2rem auto;
+    margin-bottom:0;
+    position:fixed;
+}
+img.board{
+    width:1200px;
+    border-top:10px solid #f0ecd1;
+    border-right:10px solid #f0ecd1;
+    border-bottom:7px solid #f0ecd1;
+    border-left:10px solid #f0ecd1;
+    background-color:#f0ecd1;
+}
+#playerCircle{
+    position:relative;
+    top:-350px;
+    left:60px;
+}
+#playerIcon{
+    position:relative;
+    /*Home*/
+    top:-572px;
+    left:-100px;
+}
+.board-stats{
+    position:relative;
+    top:405px;
+    left:-170px;
+}
+.board-stats p{
+    font-family:Brevia, Arial, Helvetica, sans-serif;
+    font-weight:900;
+    font-size:1.6rem;
+    color:white;
+    margin:0.9rem;
+    text-shadow:-1px -1px 0 #212227, 1px -1px 0 #212227, -1px 1px 0 #212227, 1px 1px 0 #212227;
+}
+.health-stats{
+    position:relative;
+    top:554px;
+    left:-314px;
+}
+.health-stats p{
+    font-family:Brevia, Arial, Helvetica, sans-serif;
+    font-weight:900;
+    font-size:1.2rem;
+    color:white;
+    text-shadow:-1px -1px 0 #212227, 1px -1px 0 #212227, -1px 1px 0 #212227, 1px 1px 0 #212227;
+}
+#hlthBar{
+    position:relative;
+    background-color:#43bb5c;
+    border-radius:2px;
+    width:198px;
+    height:19px;
+    top:576px;
+    left:219px;
+}
+#outline{
+    position:fixed;
+    outline:1px solid black;
+    border-radius:3px;
+    width:199px;
+    height:19px;
+    top:576px;
+    left:219px;
+}
+.bone-icons{
+    width:250px;
+    height:45px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position:relative;
+    top:614px;
+    left:-486px;
+}
+.bone-icons img{
+    margin:0 auto;
+}
+
+    /*EQUIPMENT MODAL*/
+#equipmentModal1, #equipmentModal2, #equipmentModal3, #equipmentModal4, #equipmentModal5, #equipmentModal6, #equipmentModal7, #equipmentModal8, #equipmentModal9, #equipmentModal10{
+    opacity:0;
+    transition:opacity 1000ms;
+    transition-timing-function: ease-out;
+    position:absolute;
+    top:0;
+    z-index:10;
+    width:100%;
+    height:100%;
+    background-color: hsla(0,0%,0%,60%);
+    backdrop-filter: blur(2px);
+}
+div.grid-container{
+    position:relative;
+    width:1200px;
+    margin:1rem auto;
+    padding:1rem;
+}
+div.equip-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+div.equip-grid div img{
+    display:block;
+    margin:1rem auto;
+}
+div.equip-grid div img:last-of-type{
+    margin-bottom:0;
+}
+#equipOne1, #equipTwo1, #equipThree1,
+#equipOne2, #equipTwo2, #equipThree2,
+#equipOne3, #equipTwo3, #equipThree3,
+#equipOne4, #equipTwo4, #equipThree4,
+#equipOne5, #equipTwo5, #equipThree5,
+#equipOne6, #equipTwo6, #equipThree6,
+#equipOne7, #equipTwo7, #equipThree7,
+#equipOne8, #equipTwo8, #equipThree8,
+#equipOne9, #equipTwo9, #equipThree9,
+#equipOne10, #equipTwo10, #equipThree10,
+#healOne1, #healTwo1, #healThree1,
+#healOne2, #healTwo2, #healThree2,
+#healOne3, #healTwo3, #healThree3,
+#healOne4, #healTwo4, #healThree4,
+#healOne5, #healTwo5, #healThree5,
+#healOne6, #healTwo6, #healThree6,
+#healOne7, #healTwo7, #healThree7,
+#healOne8, #healTwo8, #healThree8,
+#healOne9, #healTwo9, #healThree9,
+#healOne10, #healTwo10, #healThree10{
+    display:none;
+}
+.gear:hover, .equip:hover, .heal:hover{
+    cursor:pointer;
+}
+.compare{
+    z-index:999;
+    position:fixed;
+    top:466px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align:center;
+    font-family:Brevia, Arial, Helvetica, sans-serif;
+    font-weight:900;
+    font-size:1.2rem;
+    color:white;
+    text-shadow:-1px -1px 0 #212227, 1px -1px 0 #212227, -1px 1px 0 #212227, 1px 1px 0 #212227;
+    margin:0 0 1rem 0;
+    width:1200px;
+    margin:0 auto;
+}
+.compare p {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:0 6rem;
+    position:relative;
+    left:120px;
+}
+
+/*Battle*/
+#battleModal{
+    opacity:0;
+    transition:opacity 1000ms;
+    transition-timing-function: ease-out;
+    position:absolute;
+    top:0;
+    background-image:url("images/jungle.png");
+    background-size:cover;
+    z-index:10;
+    width:100%;
+    height:100%;
+}
+.player-container{
+    position:fixed;
+    top:302px;
+    left:20px;
+}
+.enemy-container{
+    position:fixed;
+    top:302px;
+    right:20px;
+}
+.stats{
+    opacity:1;
+    transition:opacity, 1000ms;
+    transition-timing-function: ease-out;
+    background-color:hsla(0,100%,100%,60%);
+    border-radius:20px;
+}
+.stat-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap:0.5rem;
+    margin:1rem auto;
+    margin-bottom:0;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    width:80%;
+}
+.stat-grid div{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.stat-grid div img{
+    display:block;
+    margin:0 auto;
+}
+.stat-grid div p{
+    font-family:Brevia, Arial, Helvetica, sans-serif;
+    font-weight:900;
+    font-size:1.8rem;
+    color:white;
+    text-shadow:-1px -1px 0 #212227, 1px -1px 0 #212227, -1px 1px 0 #212227, 1px 1px 0 #212227;
+    margin:0;
+}
+.health-div{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap:0.5rem;
+    padding-bottom:1rem;
+}
+.health-div img{
+    margin:0 auto;
+}
+.health-div p{
+    font-family:Brevia, Arial, Helvetica, sans-serif;
+    font-weight:900;
+    font-size:1.8rem;
+    color:white;
+    text-shadow:-1px -1px 0 #212227, 1px -1px 0 #212227, -1px 1px 0 #212227, 1px 1px 0 #212227;
+    margin:0;
+    padding-top:0.4rem;
+}
+#attack{
+    position:absolute;
+    top:670px;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+#attack:hover{
+    cursor:pointer;
+}
+#actionDiv{
+    background-color:hsla(0,100%,100%,60%);
+    border-radius: 20px;
+    margin:3rem auto;
+    padding:1rem;
+    width:50%;
+}
+#action{
+    text-align:center;
+    font-family:"Josefin Sans";
+    font-size:1.6rem;
+}
+
+    /*Heads*/
+#dome{
+    position:fixed;
+    top:292px;
+    left:392px;
+}
+#beak{
+    position:fixed;
+    top:312px;
+    left:464px;
+}
+#spikes{
+    position:fixed;
+    top:284px;
+    left:434px;
+}
+
+/*Arms*/
+#scythe{
+    position:fixed;
+    top:402px;
+    left:330px;
+    z-index:999;
+}
+#pinion{
+    position:fixed;
+    top:392px;
+    left:306px;
+    z-index:999;
+}
+#claws{
+    position:fixed;
+    top:468px;
+    left:376px;
+}
+
+/*Torsos*/
+#sail{
+    position:fixed;
+    top:287px;
+    left:231px;
+}
+#armour{
+    position:fixed;
+    top:344px;
+    left:208px;
+}
+#dermal{
+    position:fixed;
+    top:321px;
+    left:235px;
+}
+
+/*Legs*/
+#sprint{
+    position:fixed;
+    top:402px;
+    left:210px;
+}
+#bracer{
+    position:fixed;
+    top:502px;
+    left:211px;
+}
+#talon{
+    position:fixed;
+    top:489px;
+    left:250px;
+}
+
+/*Tails*/
+#club{
+    position:fixed;
+    top:373px;
+    left:34px;
+}
+#feather{
+    position:fixed;
+    top:369px;
+    left:10px;
+}
+#thags{
+    position:fixed;
+    top:352px;
+    left:12px;
+}
+
+/*DEAD!*/
+#deadModal{
+    transition-timing-function: ease-out;
+    display:none;
+    grid-template-rows: 1fr 4fr 0.6fr 1fr;
+    width:100%;
+    height:95%;
+    position:fixed;
+    top:0;
+    margin:0;
+    padding:4rem auto;
+}
+#deadModal h2, #deadModal h3{
+    display:block;
+}
+#deadModal h2{
+    margin-top:2%;
+}
+#deadModal>img{
+    width:26%;
+    margin:2% auto;
+    margin-bottom:0;
+}
+#deadModal a{
+    text-align:center;
+}
+#deadModal a img{
+    width:20%;
+    margin-top:0;
+}
+
+#deadH2, #deadH3, #playAgain{
+    opacity:0;
+    transition:opacity, 1000ms;
+    transition-timing-function: ease-out;
+}
+
+/*WINNER*/
+/* #finish{
+    opacity:0;
+    transition:opacity, 1000ms;
+    transition-timing-function: ease-out;
+} */
+#finale{
+    opacity:1;
+    transition:opacity, 1000ms;
+    transition-timing-function: ease-out;
+}
+#finale h2{
+    margin-top:2rem;
+    margin-bottom:0;
+}
+#finale p{
+    font-family:"Josefin Sans";
+    font-size:2rem;
+    text-align:center;
+    color:white;
+    text-shadow:-1px -1px 0 #212227, 1px -1px 0 #212227, -1px 1px 0 #212227, 1px 1px 0 #212227;
+    margin:1rem 0;
+}
+#winAgain{
+    position:fixed;
+    left:60%;
+    top:634px;
+}
+#bonusBtn{
+    position:relative;
+    top:430px;
+    left:20%;
+}
+#bonusBtn:hover{
+    cursor:pointer;
+}
+#dressup{
+    opacity:0;
+    transition:opacity, 1000ms;
+    transition-timing-function: ease-out;
+}
+#dressup h2{
+    margin-top:2rem;
+    margin-bottom:0;
+}
+.body-parts, .buttons{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+    width:42%;
+    margin:0 auto;
+    position: absolute;
+    left:50%;
+}
+.body-parts{
+    top:39%;
+}
+.body-parts img{
+    display:block;
+    margin:0 auto;
+}
+.buttons{
+    top:51%;
+}
+.buttons div button{
+    width:100%;
+    font-family:"Josefin Sans";
+    font-size:1.2rem;
+    margin:0.25rem 0;
+    padding:0.4rem 0;
+    color:white;
+    text-shadow:-1px -1px 0 #212227, 1px -1px 0 #212227, -1px 1px 0 #212227, 1px 1px 0 #212227;
+    background-color:#969696;
+    border:5px solid #666;
+    border-radius:10px;
+}
+.buttons div button:hover{
+    cursor:pointer;
+    background-color:#888;
+}
+/*FOOTER*/
+footer{
+    opacity:0;
+    transition:opacity,1000ms;
+    transition-timing-function: ease-out;
+    position:fixed;
+    bottom:0;
+    background-color:hsla(0,100%,100%,60%);
+    width:100%;
+    text-align:center;
+}
+small{
+    font-family:"Josefin Sans";
+    
+    margin:0 auto;
+}
+small a{
+    font-weight:bold;
+}
+
+
+
+/*HIDDEN*/
+.hidden{
+    display:none;
+}
